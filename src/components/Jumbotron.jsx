@@ -10,7 +10,7 @@ function Jumbotron() {
         >
             <div className="bg-neutral-0 relative">
                 <div
-                    className="absolute inset-0 bg-cover bg-center xl:h-lvh"
+                    className="absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: "url('/truck.jpeg')" }}
                 >
                     <div className="absolute inset-0 bg-black opacity-30"></div>
