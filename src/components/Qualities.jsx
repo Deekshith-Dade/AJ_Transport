@@ -1,8 +1,14 @@
-import React from 'react'
+import { motion } from 'framer-motion';
+
 
 function Qualities() {
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        //   className="my-20 p-6 bg-white shadow-lg rounded-lg"
+        >
             <div className="py-12 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="lg:text-center">
@@ -26,7 +32,7 @@ function Qualities() {
                                     <div className="ml-4">
                                         <h3 className="text-lg leading-6 font-medium text-gray-900">Safest Supply</h3>
                                         <p className="mt-2 text-base text-gray-500">
-                                            At our company, we take the safety of our customers seriously. That's why we offer the safest supply of products on the market.
+                                            At our company, we take the safety of our customers seriously. Thats why we offer the safest supply of products on the market.
                                         </p>
                                     </div>
                                 </div>
@@ -56,7 +62,7 @@ function Qualities() {
                                     <div className="ml-4">
                                         <h3 className="text-lg leading-6 font-medium text-gray-900">Cheapest Dealing</h3>
                                         <p className="mt-2 text-base text-gray-500">
-                                            Looking for the best possible price when dealing with stocks? Look no further than our "Cheapest Dealing" option.
+                                            Looking for the best possible price when dealing with stocks? Look no further than our Cheapest Dealing option.
                                         </p>
                                     </div>
                                 </div>
@@ -81,7 +87,7 @@ function Qualities() {
                 </div>
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 

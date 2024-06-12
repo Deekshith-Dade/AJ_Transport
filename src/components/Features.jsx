@@ -1,8 +1,12 @@
-import React from 'react'
-
+import { motion } from 'framer-motion'
 function Features() {
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75 }}
+        // className="my-20 p-6 bg-white shadow-lg rounded-lg"
+        >
             <div className="py-12 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="lg:text-center">
@@ -85,7 +89,7 @@ function Features() {
                 </div>
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 
