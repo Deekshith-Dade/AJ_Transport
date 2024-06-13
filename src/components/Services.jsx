@@ -15,6 +15,10 @@ const services = [
         description: "Our vehicles are equipped with advanced safety technology to ensure safe and compliant transportation services.",
         image: "path/to/vehicle-safety.jpg",
     },
+    {
+        title: "HSE Managemenet",
+        description: "lor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    }
 ];
 
 const Service = () => {
@@ -24,9 +28,11 @@ const Service = () => {
             <div className="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-8 md:space-y-0">
                 {services.map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-md p-5 max-w-xs">
-                        <img src={service.image} alt={service.title} className="rounded-t-lg w-full h-40 object-cover" />
-                        <h2 className="text-2xl font-semibold mt-5 mb-3">{service.title}</h2>
-                        <p className="text-gray-700">{service.description}</p>
+                        <a href={service.title}>
+                            <img src={service.image} alt={service.title} className="rounded-t-lg w-full h-40 object-cover" />
+                            <h2 className="text-2xl font-semibold mt-5 mb-3">{service.title}</h2>
+                            <p className="text-gray-700">{service.description}</p>
+                        </a>
                     </div>
                 ))}
             </div>

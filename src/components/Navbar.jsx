@@ -10,7 +10,7 @@ function Navbar() {
     return (
         <div>
             {/* <!-- Navigation bar --> */}
-            <nav className="absolute w-full top-0 left-0 bg-transparent z-50">
+            <nav className="bg-white shadow-lg">
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex justify-between">
                         <div className="flex space-x-7">
