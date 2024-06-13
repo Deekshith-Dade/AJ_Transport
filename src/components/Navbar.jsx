@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,17 +17,17 @@ function Navbar() {
                         <div className="flex space-x-7">
                             <div>
                                 {/* <!-- Website Logo --> */}
-                                <a href="#" className="flex items-center py-4 px-2">
+                                <Link to="/" className="flex items-center py-4 px-2">
                                     <img src="src/assets/ajtransport.jpeg" alt="Logo" className="h-20 w-40 mr-2" />
-                                </a>
+                                </Link>
                             </div>
                             {/* <!-- Primary Navbar items --> */}
                             <div className="hidden md:flex items-center space-x-1">
-                                <a href="#" className="py-4 px-2 text-neutral-1000 font-semibold hover:text-green-500 transition duration-300">About</a>
+                                <Link to="/about" className="py-4 px-2 text-neutral-1000 font-semibold hover:text-green-500 transition duration-300">About</Link>
                                 {/* <a href="#" className="py-4 px-2 text-neutral-1000 font-semibold hover:text-green-500 transition duration-300">Safety</a>
                                 <a href="#" className="py-4 px-2 text-neutral-1000 font-semibold hover:text-green-500 transition duration-300">Solutions</a>
                                 <a href="#" className="py-4 px-2 text-neutral-1000 font-semibold hover:text-green-500 transition duration-300">Network</a> */}
-                                <a href="#" className="py-4 px-2 text-neutral-1000 font-semibold hover:text-green-500 transition duration-300">Contact Us</a>
+                                <Link to="/contact" className="py-4 px-2 text-neutral-1000 font-semibold hover:text-green-500 transition duration-300">Contact Us</Link>
                             </div>
                         </div>
                         {/* <!-- Secondary Navbar items --> */}
@@ -55,11 +56,11 @@ function Navbar() {
                 <div className={`md:hidden ${isMobileMenuOpen ? 'max-h-screen transition-max-height duration-500 ease-in' : 'max-h-0 overflow-hidden transition-max-height duration-500 ease-out'} mobile-menu`}>
                     <ul className="bg-white">
                         <li className="active">
-                            <a href="#" className="block text-sm px-2 py-4  bg-neutral-1000 hover:text-neutral-0 hover:bg-green-500">About</a>
+                            <a href="/about" className="block text-sm px-2 py-4  bg-neutral-1000 hover:text-neutral-0 hover:bg-green-500">About</a>
                         </li>
 
                         <li>
-                            <a href="#contact" className="block text-sm px-2 py-4 bg-neutral-1000 hover:text-neutral-0 hover:bg-green-500 transition duration-300">Contact Us</a>
+                            <a href="/contact" className="block text-sm px-2 py-4 bg-neutral-1000 hover:text-neutral-0 hover:bg-green-500 transition duration-300">Contact Us</a>
                         </li>
                     </ul>
                 </div>
